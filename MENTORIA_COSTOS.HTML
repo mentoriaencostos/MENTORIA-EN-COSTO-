@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título Actualizado -->
+    <title>Mentoría en Costos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- FUENTE INTER -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            /* Fuente Inter */
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f5; 
+            color: #1f2937;
+        }
+        .header-bg {
+            background-color: #CC333F;
+            background-image: linear-gradient(135deg, #CC333F 0%, #a82a34 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo general para las tarjetas de experto */
+        .expert-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f5);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 8px solid; /* Placeholder, se definirá con color de experto */
+            height: 100%;
+        }
+
+        .expert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Colores de Borde para cada experto */
+        .keyter-border { border-top-color: #CC333F; } /* Rojo Principal */
+        .simon-border { border-top-color: #00A0B0; } /* Azul Secundario */
+        .ingerson-border { border-top-color: #FFD700; } /* Oro */
+        .luis-border { border-top-color: #b8b7b7; } /* Plata/Gris */
+
+        /* Estilo de la fuente para el nombre del experto (Asegurando negro) */
+        .expert-name {
+            color: #111827; /* Gris muy oscuro, casi negro */
+        }
+
+        /* Estilo para el texto de estudios (Asegurando negro y negrita) */
+        .expert-studies {
+            color: #111827;
+            font-weight: 700; /* semibold */
+        }
+        
+        /* Estilo para el botón de WhatsApp */
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            background-color: #25D366; /* Verde WhatsApp */
+            border-radius: 9999px; /* Full rounded */
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.5);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Verde más oscuro al pasar el ratón */
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-bg p-8 text-center">
+        <!-- Título Principal -->
+        <h1 class="text-5xl md:text-6xl font-black text-white uppercase tracking-wider">
+            Mentoría en Costos
+        </h1>
+        <p class="text-xl mt-3 text-gray-200">
+            Comunidad Colaborativa de Profesionales Expertos.
+        </p>
+    </div>
+
+    <main class="container mx-auto p-4 md:p-10">
+        
+        <!-- INTRODUCCIÓN Y PRESENTACIÓN DE LA MESA DE EXPERTOS -->
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg mb-10 border-l-4 border-[#00A0B0]">
+            <!-- Título de Bienvenida -->
+            <h2 class="text-3xl font-bold text-[#CC333F] mb-4 flex items-center">
+                <span class="text-4xl mr-3">👋</span> ¡Bienvenido/a a Mentoría de Costos!
+            </h2>
+            <!-- Párrafo de Comunidad -->
+            <p class="text-lg text-gray-800 mb-6 text-justify">
+                Somos una comunidad de profesionales que comparten una pasión común: los costos, unidos por el deseo de compartir conocimientos y experiencias. Aquí encontrarás un espacio seguro y enriquecedor para impulsar tu trayectoria profesional, académica o empresarial.
+            </p>
+            
+            <!-- Párrafo de Mesa de Expertos -->
+            <p class="text-lg text-gray-900 border-t pt-4 mt-6 text-justify">
+                La comunidad está liderada por Keyter Key, y su valor reside en la sinergia de una Mesa de Expertos cuyas credenciales combinan el más alto rigor académico con una vasta experiencia gerencial y regulatoria:
+            </p>
+        </div>
+
+        <!-- SECCIÓN DE EXPERTOS (GRID) -->
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg mb-10">
+            <h2 class="text-4xl font-black mb-10 text-[#00A0B0] text-center">Mesa de Expertos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- EXPERTO 1: Keyter Key (Investigación - Libro Abierto 📖) -->
+                <div class="expert-card keyter-border">
+                    <!-- Icono Libro Abierto para conocimiento -->
+                    <h3 class="expert-name text-2xl font-black mb-2 flex items-center">
+                        <span class="text-4xl mr-3 text-[#CC333F]">📖</span> Keyter Key 
+                    </h3>
+                    <!-- Estudios con clase expert-studies para negro y negrita -->
+                    <p class="expert-studies text-lg mb-3">Economista, Especialista en Administración Avanzada de Costos.</p>
+                    <!-- Lista de puntos con justificación de texto -->
+                    <ul class="list-disc ml-5 text-gray-900 space-y-2 text-justify">
+                        <li>Investigador y conferencista con más de 20 años de experiencia comprobada.</li>
+                        <li>Docente universitario de Contabilidad de Costos I y II.</li>
+                        <li>Tutor de la Línea de Investigación de Costos en pregrado (Contaduría Pública UAH).</li>
+                    </ul>
+                </div>
+
+                <!-- EXPERTO 2: Simón Ascanio (Auditoría - Monedas 🪙) -->
+                <div class="expert-card simon-border">
+                    <!-- Icono Monedas para auditoría/finanzas -->
+                    <h3 class="expert-name text-2xl font-black mb-2 flex items-center">
+                        <span class="text-4xl mr-3 text-[#00A0B0]">🪙</span> Simón Ascanio
+                    </h3>
+                    <!-- Estudios con clase expert-studies para negro y negrita -->
+                    <p class="expert-studies text-lg mb-3">Administrador, Magíster en Ciencias Administrativas y Especialista en Finanzas.</p>
+                    <!-- Lista de puntos con justificación de texto -->
+                    <ul class="list-disc ml-5 text-gray-900 space-y-2 text-justify">
+                        <li>Experto en auditoría gubernamental, planificación y presupuesto.</li>
+                        <li>Aporta profundo conocimiento en finanzas aplicadas a la administración.</li>
+                        <li>Docente universitario (UNEXCA).</li>
+                    </ul>
+                </div>
+
+                <!-- EXPERTO 3: Ingerson Freites (Economía - Gráfico Ascendente 📈) -->
+                <div class="expert-card ingerson-border">
+                    <!-- Icono Gráfico Ascendente para economía y mercados -->
+                    <h3 class="expert-name text-2xl font-black mb-2 flex items-center">
+                        <span class="text-4xl mr-3 text-[#c8a000]">📈</span> Ingerson Freites
+                    </h3>
+                    <!-- Estudios con clase expert-studies para negro y negrita -->
+                    <p class="expert-studies text-lg mb-3">Economista y Docente Universitario (UCV).</p>
+                    <!-- Lista de puntos con justificación de texto -->
+                    <ul class="list-disc ml-5 text-gray-900 space-y-2 text-justify">
+                        <li>Exintendente de Costos, Ganancias y Precios Justos de la SUNNDDE.</li>
+                        <li>Visión directa y regulatoria sobre la fijación y control de precios y costos.</li>
+                        <li>Aporta la perspectiva de la economía en el análisis de costos.</li>
+                    </ul>
+                </div>
+
+                <!-- EXPERTO 4: Luis Marín (Contabilidad - Pergamino 📜) -->
+                <div class="expert-card luis-border">
+                    <!-- Icono Pergamino para normas y contabilidad -->
+                    <h3 class="expert-name text-2xl font-black mb-2 flex items-center">
+                        <span class="text-4xl mr-3 text-[#939393]">📜</span> Luis Marín
+                    </h3>
+                    <!-- Estudios con clase expert-studies para negro y negrita -->
+                    <p class="expert-studies text-lg mb-3">Contador, Magíster en Administración de Negocios y Especialista en Presupuesto.</p>
+                    <!-- Lista de puntos con justificación de texto -->
+                    <ul class="list-disc ml-5 text-gray-900 space-y-2 text-justify">
+                        <li>Vasta trayectoria en gerencia empresarial y desarrollo de presupuestos.</li>
+                        <li>Docente universitario de Contabilidad de Costos I y II en la UAH.</li>
+                        <li>Experiencia en la aplicación práctica de costos para la toma de decisiones.</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <!-- Párrafo de Cierre -->
+            <div class="mt-10 p-6 bg-gray-50 rounded-lg border-l-4 border-[#CC333F]">
+                <p class="text-xl text-gray-800 font-semibold mb-3">
+                    Juntos, aplicamos esta experiencia multifacética para garantizar que la teoría de costos se erija como el motor decisivo de tu estrategia.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Únete y aprende de los mejores en un ambiente colaborativo, trabajando juntos para alcanzar tus objetivos individuales y colectivos.
+                </p>
+            </div>
+
+            <!-- ENLACE DE WHATSAPP AGREGADO AQUÍ -->
+            <div class="mt-10 text-center">
+                <a href="https://chat.whatsapp.com/GqCYRAB9EE3HiX4iLA3zto" target="_blank" class="whatsapp-button">
+                    <!-- Emoji de WhatsApp para mayor claridad visual -->
+                    <span class="mr-3">💬</span> ¡Únete a la Mentoría en Costos!
+                </a>
+                <p class="mt-3 text-sm text-gray-600">Haz clic para entrar a nuestro chat exclusivo de WhatsApp.</p>
+            </div>
+            <!-- FIN DE ENLACE DE WHATSAPP -->
+
+        </div>
+
+    </main>
+    
+    <footer class="text-center p-4 mt-10 bg-gray-200">
+        <p class="text-gray-600">&copy; 2025 Mentoría en Costos. Rigor Académico y Experiencia Gerencial.</p>
+    </footer>
+</body>
+</html>
